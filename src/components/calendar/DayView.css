@@ -1,0 +1,49 @@
+.day-view {
+  padding: 1rem;
+}
+
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.today-badge {
+  background: var(--primary-green);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+}
+
+.day-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-row {
+  display: flex;
+  border-bottom: 1px solid var(--gray-200);
+  min-height: 60px;
+}
+
+.timeline-hour {
+  width: 60px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  border-right: 1px solid var(--gray-200);
+}
+
+.timeline-tasks {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.timeline-task {
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 0.5rem;
+  background: var(--gray-100);
+}

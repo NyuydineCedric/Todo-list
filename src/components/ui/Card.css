@@ -1,0 +1,19 @@
+.card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+[data-theme="dark"] .card {
+  background: var(--gray-800);
+}
+
+.card-hoverable {
+  cursor: pointer;
+}
+
+.card-hoverable:hover {
+  box-shadow: var(--shadow-lg);
+}

@@ -1,0 +1,11 @@
+.chart-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.chart-card h3 {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,85 @@
+.shortcuts-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.shortcuts-modal {
+  background: white;
+  border-radius: var(--radius-xl);
+  width: 90%;
+  max-width: 500px;
+  overflow: hidden;
+  box-shadow: var(--shadow-2xl);
+}
+
+[data-theme="dark"] .shortcuts-modal {
+  background: var(--gray-800);
+}
+
+.shortcuts-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.shortcuts-header h3 {
+  flex: 1;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--gray-500);
+}
+
+.shortcuts-list {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.shortcut-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+}
+
+.shortcut-item:hover {
+  background: var(--gray-100);
+}
+
+.shortcut-keys {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.shortcut-key {
+  padding: 0.25rem 0.5rem;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.shortcut-desc {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}

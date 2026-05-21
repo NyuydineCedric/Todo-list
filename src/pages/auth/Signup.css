@@ -1,0 +1,96 @@
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+}
+
+.signup-card {
+  max-width: 520px;
+  width: 100%;
+  padding: 2.5rem;
+  border-radius: var(--radius-2xl);
+  background: white;
+  box-shadow: var(--shadow-2xl);
+}
+
+[data-theme="dark"] .signup-card {
+  background: var(--gray-800);
+}
+
+.signup-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.signup-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.signup-header p {
+  color: var(--gray-600);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-strength {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.strength-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--gray-200);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.strength-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.social-signup {
+  margin-top: 1.5rem;
+}
+
+.login-prompt {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--gray-600);
+}
+
+.login-prompt a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .signup-card {
+    padding: 1.5rem;
+  }
+}

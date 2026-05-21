@@ -1,0 +1,79 @@
+.focus-page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 2rem;
+}
+
+.focus-container {
+  text-align: center;
+  padding: 3rem;
+  border-radius: var(--radius-2xl);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  max-width: 600px;
+  width: 100%;
+}
+
+.focus-container h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.timer-display {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: monospace;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.timer-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.timer-btn:hover {
+  transform: scale(1.05);
+  background: var(--primary-green);
+  color: white;
+}
+
+.session-count {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.focus-quote {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .timer-display {
+    font-size: 3rem;
+  }
+  .focus-container {
+    padding: 2rem;
+  }
+}

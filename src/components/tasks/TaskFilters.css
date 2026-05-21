@@ -1,0 +1,38 @@
+.task-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.search-bar-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gray-100);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-lg);
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-bar-filter input {
+  background: none;
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.filter-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-group select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-lg);
+  background: white;
+  cursor: pointer;
+}

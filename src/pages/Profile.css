@@ -1,0 +1,135 @@
+/* src/pages/Profile.css */
+.profile-page {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  background: white;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  background: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.profile-info h2 {
+  margin-bottom: 0.5rem;
+}
+
+.profile-info p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--gray-100);
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.edit-btn:hover {
+  background: var(--gray-200);
+}
+
+.profile-edit {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile-edit input {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.achievements-section {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+}
+
+.achievements-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.achievement-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  background: var(--gray-50);
+}
+
+.achievement-card.unlocked {
+  background: var(--primary-green);
+  color: white;
+}
+
+.achievement-card.locked {
+  opacity: 0.5;
+}
+
+.achievement-icon {
+  font-size: 1.5rem;
+}
+
+.achievement-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 1rem;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}

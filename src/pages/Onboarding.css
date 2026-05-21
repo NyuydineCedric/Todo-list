@@ -1,0 +1,69 @@
+/* src/pages/Onboarding.css */
+.onboarding-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+}
+
+.onboarding-card {
+  text-align: center;
+  padding: 3rem;
+  border-radius: var(--radius-2xl);
+  background: white;
+  max-width: 500px;
+  width: 100%;
+}
+
+.onboarding-card svg {
+  margin-bottom: 1.5rem;
+}
+
+.onboarding-card h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.onboarding-card p {
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+}
+
+.onboarding-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gray-300);
+  transition: all var(--transition-fast);
+}
+
+.dot.active {
+  width: 24px;
+  border-radius: 10px;
+  background: var(--primary-green);
+}
+
+.onboarding-btn {
+  padding: 0.75rem 2rem;
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.onboarding-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}

@@ -1,0 +1,19 @@
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: var(--radius-xl);
+}
+
+.empty-icon {
+  color: var(--gray-400);
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: var(--gray-500);
+}

@@ -1,0 +1,33 @@
+/* src/components/common/FloatingAddButton.css */
+.floating-add-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  transition: all var(--transition-fast);
+}
+
+.floating-add-btn:hover {
+  background: #0ea66e;
+  box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 768px) {
+  .floating-add-btn {
+    bottom: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+}

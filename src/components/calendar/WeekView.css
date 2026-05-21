@@ -1,0 +1,66 @@
+.week-view {
+  overflow-x: auto;
+}
+
+.week-header {
+  display: grid;
+  grid-template-columns: 60px repeat(7, 1fr);
+  border-bottom: 1px solid var(--gray-200);
+  margin-bottom: 0.5rem;
+}
+
+.time-col {
+  grid-column: 1;
+}
+
+.week-day-header {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.week-day-header.today {
+  background: rgba(22, 196, 127, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.day-name {
+  font-weight: 600;
+}
+
+.day-date {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+}
+
+.week-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.week-row {
+  display: grid;
+  grid-template-columns: 60px repeat(7, 1fr);
+  min-height: 60px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.time-label {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.week-cell {
+  border-left: 1px solid var(--gray-100);
+  padding: 0.25rem;
+}
+
+.week-task {
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

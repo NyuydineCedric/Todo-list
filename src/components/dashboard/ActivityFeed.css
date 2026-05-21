@@ -1,0 +1,38 @@
+.activity-feed-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activity-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.activity-icon {
+  width: 28px;
+  height: 28px;
+  background: var(--gray-100);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-content p {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.activity-content small {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}

@@ -1,0 +1,152 @@
+/* src/pages/auth/Login.css */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+}
+
+.login-card {
+  max-width: 480px;
+  width: 100%;
+  padding: 2.5rem;
+  border-radius: var(--radius-2xl);
+  background: white;
+  box-shadow: var(--shadow-2xl);
+}
+
+[data-theme="dark"] .login-card {
+  background: var(--gray-800);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.login-header p {
+  color: var(--gray-600);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--gray-700);
+}
+
+.forgot-link {
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.forgot-link:hover {
+  color: var(--accent-blue);
+}
+
+.password-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+}
+
+.error-message {
+  background: #FEE2E2;
+  color: var(--danger-red);
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.social-login {
+  margin-top: 1.5rem;
+}
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 30px);
+  height: 1px;
+  background: var(--gray-300);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.divider span {
+  background: white;
+  padding: 0 1rem;
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+[data-theme="dark"] .divider span {
+  background: var(--gray-800);
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.signup-prompt {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--gray-600);
+}
+
+.signup-prompt a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .login-card {
+    padding: 1.5rem;
+  }
+}

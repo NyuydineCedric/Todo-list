@@ -1,0 +1,73 @@
+/* src/components/ui/Button.css */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: var(--primary-green);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #0ea66e;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--gray-300);
+  color: var(--gray-700);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--gray-700);
+}
+
+.btn-ghost:hover {
+  background: var(--gray-100);
+}
+
+.btn-small {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.btn-medium {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+.btn-large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

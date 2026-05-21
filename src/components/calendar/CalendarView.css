@@ -1,0 +1,41 @@
+.calendar-view {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="dark"] .calendar-view {
+  background: var(--gray-800);
+}
+
+.calendar-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.calendar-toolbar button {
+  padding: 0.5rem 1rem;
+  background: var(--gray-100);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.calendar-toolbar button:hover {
+  background: var(--gray-200);
+}
+
+.current-date {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.today-btn {
+  background: var(--primary-green) !important;
+  color: white;
+}
