@@ -22,5 +22,7 @@ export const logoutUser = () => {
 
 export const getCurrentUser = () => {
   const user = localStorage.getItem("user");
+  const token = localStorage.getItem("token");
+  if (token) setAuthToken(token);
   return user ? JSON.parse(user) : null;
 };

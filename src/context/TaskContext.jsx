@@ -7,14 +7,6 @@ const taskReducer = (state, action) => {
   switch (action.type) {
     case "SET_TASKS":
       return action.payload;
-    case "ADD_TASK":
-      return [action.payload, ...state];
-    case "UPDATE_TASK":
-      return state.map((task) =>
-        task.id === action.payload.id ? action.payload : task,
-      );
-    case "DELETE_TASK":
-      return state.filter((task) => task.id !== action.payload);
     default:
       return state;
   }
@@ -23,45 +15,62 @@ const taskReducer = (state, action) => {
 export const TaskProvider = ({ children }) => {
   const [tasks, dispatch] = useReducer(taskReducer, []);
 
+  // Load tasks from backend
+  const loadTasks = async () => {
+    try {
+      console.log("🔄 Loading tasks...");
+      const data = await tasksAPI.getAll();
+      console.log("✅ Tasks loaded:", data.length);
+      dispatch({ type: "SET_TASKS", payload: data });
+    } catch (err) {
+      console.error("❌ Failed to load tasks:", err);
+    }
+  };
+
+  // Load tasks on mount
   useEffect(() => {
-    const loadTasks = async () => {
-      try {
-        const data = await tasksAPI.getAll();
-        dispatch({ type: "SET_TASKS", payload: data });
-      } catch (err) {
-        console.error("Failed to load tasks:", err);
-      }
-    };
     loadTasks();
   }, []);
 
+  // Add a new task
   const addTask = async (task) => {
     try {
+      console.log("📤 Adding task:", task);
       const newTask = await tasksAPI.create(task);
-      dispatch({ type: "ADD_TASK", payload: newTask });
+      console.log("✅ Task created on server:", newTask);
+      await loadTasks(); // Refresh the entire list
+      return newTask;
     } catch (err) {
-      console.error("Failed to add task:", err);
+      console.error("❌ Failed to add task:", err);
+      throw err;
     }
   };
 
+  // Update an existing task
   const updateTask = async (task) => {
     try {
-      const updated = await tasksAPI.update(task.id, task);
-      dispatch({ type: "UPDATE_TASK", payload: updated });
+      console.log("📝 Updating task:", task.id);
+      await tasksAPI.update(task.id, task);
+      await loadTasks();
     } catch (err) {
-      console.error("Failed to update task:", err);
+      console.error("❌ Failed to update task:", err);
+      throw err;
     }
   };
 
+  // Delete a task
   const deleteTask = async (taskId) => {
     try {
+      console.log("🗑️ Deleting task:", taskId);
       await tasksAPI.delete(taskId);
-      dispatch({ type: "DELETE_TASK", payload: taskId });
+      await loadTasks();
     } catch (err) {
-      console.error("Failed to delete task:", err);
+      console.error("❌ Failed to delete task:", err);
+      throw err;
     }
   };
 
+  // Toggle complete status
   const toggleComplete = async (taskId) => {
     const task = tasks.find((t) => t.id === taskId);
     if (task) {
@@ -69,6 +78,7 @@ export const TaskProvider = ({ children }) => {
     }
   };
 
+  // Reorder tasks (frontend only)
   const reorderTasks = (reorderedTasks) => {
     dispatch({ type: "SET_TASKS", payload: reorderedTasks });
   };
@@ -82,6 +92,7 @@ export const TaskProvider = ({ children }) => {
         deleteTask,
         toggleComplete,
         reorderTasks,
+        loadTasks,
       }}
     >
       {children}

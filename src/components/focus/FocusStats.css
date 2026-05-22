@@ -2,22 +2,26 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
+  margin: 1.5rem 0;
 }
 
 .focus-stat-card {
   text-align: center;
-  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(4px);
 }
 
 .focus-stat-card .stat-value {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary-green);
+  color: #16C47F;
 }
 
 .focus-stat-card .stat-label {
-  font-size: 0.875rem;
-  color: var(--gray-500);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
 }
